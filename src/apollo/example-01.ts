@@ -66,5 +66,6 @@ const server = new ApolloServer({ typeDefs, resolvers });
 // This `listen` method launches a web-server.  Existing apps
 // can utilize middleware options, which we'll discuss later.
 server.listen().then(({ url }) => {
+  throw new Error('ERROR')
   console.log(`[apollo-server] 🚀  Server ready at ${url}`);
 });
